@@ -43,7 +43,6 @@ public struct JSONRequest: RequestType {
                 do {
                     if let json = try NSJSONSerialization.JSONObjectWithData(data, options: [.AllowFragments]) as? JSON {
                         let responseStruct = Response(data: json, response: response.response)
-                        print(responseStruct)
                         self.completion(responseStruct)
                         return
                     }
