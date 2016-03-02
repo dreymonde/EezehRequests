@@ -10,6 +10,31 @@
 		BE080B851C86E5720019966A /* EezehRequests.h in Headers */ = {isa = PBXBuildFile; fileRef = BE080B841C86E5720019966A /* EezehRequests.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE080B8C1C86E5720019966A /* EezehRequests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE080B811C86E5720019966A /* EezehRequests.framework */; };
 		BE080B911C86E5720019966A /* EezehRequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080B901C86E5720019966A /* EezehRequestsTests.swift */; };
+		BE080BBF1C86E5FD0019966A /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BB81C86E5FD0019966A /* RequestType.swift */; };
+		BE080BC11C86E5FD0019966A /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BB91C86E5FD0019966A /* DataRequest.swift */; };
+		BE080BC31C86E5FD0019966A /* JSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBA1C86E5FD0019966A /* JSONRequest.swift */; };
+		BE080BC51C86E5FD0019966A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBB1C86E5FD0019966A /* Response.swift */; };
+		BE080BC71C86E5FD0019966A /* Receivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBC1C86E5FD0019966A /* Receivable.swift */; };
+		BE080BDC1C86E90C0019966A /* EezehRequests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE080BD21C86E90C0019966A /* EezehRequests.framework */; };
+		BE080BE91C86E9D20019966A /* EezehRequests.h in Headers */ = {isa = PBXBuildFile; fileRef = BE080B841C86E5720019966A /* EezehRequests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE080BEA1C86E9E30019966A /* EezehRequestsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080B901C86E5720019966A /* EezehRequestsTests.swift */; };
+		BE080BEB1C86E9E80019966A /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BB81C86E5FD0019966A /* RequestType.swift */; };
+		BE080BEC1C86E9E80019966A /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BB91C86E5FD0019966A /* DataRequest.swift */; };
+		BE080BED1C86E9E80019966A /* JSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBA1C86E5FD0019966A /* JSONRequest.swift */; };
+		BE080BEE1C86E9E80019966A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBB1C86E5FD0019966A /* Response.swift */; };
+		BE080BEF1C86E9E80019966A /* Receivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBC1C86E5FD0019966A /* Receivable.swift */; };
+		BE080C0A1C86ED6B0019966A /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BB81C86E5FD0019966A /* RequestType.swift */; };
+		BE080C0B1C86ED6B0019966A /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BB91C86E5FD0019966A /* DataRequest.swift */; };
+		BE080C0C1C86ED6B0019966A /* JSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBA1C86E5FD0019966A /* JSONRequest.swift */; };
+		BE080C0D1C86ED6B0019966A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBB1C86E5FD0019966A /* Response.swift */; };
+		BE080C0E1C86ED6B0019966A /* Receivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBC1C86E5FD0019966A /* Receivable.swift */; };
+		BE080C0F1C86ED6B0019966A /* EezehRequests.h in Headers */ = {isa = PBXBuildFile; fileRef = BE080B841C86E5720019966A /* EezehRequests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE080C101C86ED6C0019966A /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BB81C86E5FD0019966A /* RequestType.swift */; };
+		BE080C111C86ED6C0019966A /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BB91C86E5FD0019966A /* DataRequest.swift */; };
+		BE080C121C86ED6C0019966A /* JSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBA1C86E5FD0019966A /* JSONRequest.swift */; };
+		BE080C131C86ED6C0019966A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBB1C86E5FD0019966A /* Response.swift */; };
+		BE080C141C86ED6C0019966A /* Receivable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE080BBC1C86E5FD0019966A /* Receivable.swift */; };
+		BE080C151C86ED6C0019966A /* EezehRequests.h in Headers */ = {isa = PBXBuildFile; fileRef = BE080B841C86E5720019966A /* EezehRequests.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,15 +45,31 @@
 			remoteGlobalIDString = BE080B801C86E5720019966A;
 			remoteInfo = EezehRequests;
 		};
+		BE080BDD1C86E90C0019966A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE080B781C86E5720019966A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE080BD11C86E90C0019966A;
+			remoteInfo = "EezehRequests OSX";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		BE080B811C86E5720019966A /* EezehRequests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EezehRequests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE080B841C86E5720019966A /* EezehRequests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EezehRequests.h; sourceTree = "<group>"; };
 		BE080B861C86E5720019966A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE080B8B1C86E5720019966A /* EezehRequestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EezehRequestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE080B8B1C86E5720019966A /* EezehRequests iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EezehRequests iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE080B901C86E5720019966A /* EezehRequestsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EezehRequestsTests.swift; sourceTree = "<group>"; };
 		BE080B921C86E5720019966A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE080BB81C86E5FD0019966A /* RequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
+		BE080BB91C86E5FD0019966A /* DataRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
+		BE080BBA1C86E5FD0019966A /* JSONRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONRequest.swift; sourceTree = "<group>"; };
+		BE080BBB1C86E5FD0019966A /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		BE080BBC1C86E5FD0019966A /* Receivable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Receivable.swift; sourceTree = "<group>"; };
+		BE080BD21C86E90C0019966A /* EezehRequests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EezehRequests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE080BDB1C86E90C0019966A /* EezehRequests OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EezehRequests OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE080BF51C86ECEB0019966A /* EezehRequests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EezehRequests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE080C021C86ED410019966A /* EezehRequests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EezehRequests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +85,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE080B8C1C86E5720019966A /* EezehRequests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BCE1C86E90C0019966A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BD81C86E90C0019966A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE080BDC1C86E90C0019966A /* EezehRequests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BF11C86ECEB0019966A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BFE1C86ED410019966A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				BE080B811C86E5720019966A /* EezehRequests.framework */,
-				BE080B8B1C86E5720019966A /* EezehRequestsTests.xctest */,
+				BE080B8B1C86E5720019966A /* EezehRequests iOS Tests.xctest */,
+				BE080BD21C86E90C0019966A /* EezehRequests.framework */,
+				BE080BDB1C86E90C0019966A /* EezehRequests OSX Tests.xctest */,
+				BE080BF51C86ECEB0019966A /* EezehRequests.framework */,
+				BE080C021C86ED410019966A /* EezehRequests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +145,11 @@
 		BE080B831C86E5720019966A /* EezehRequests */ = {
 			isa = PBXGroup;
 			children = (
+				BE080BB81C86E5FD0019966A /* RequestType.swift */,
+				BE080BB91C86E5FD0019966A /* DataRequest.swift */,
+				BE080BBA1C86E5FD0019966A /* JSONRequest.swift */,
+				BE080BBB1C86E5FD0019966A /* Response.swift */,
+				BE080BBC1C86E5FD0019966A /* Receivable.swift */,
 				BE080B841C86E5720019966A /* EezehRequests.h */,
 				BE080B861C86E5720019966A /* Info.plist */,
 			);
@@ -97,12 +176,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE080BCF1C86E90C0019966A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE080BE91C86E9D20019966A /* EezehRequests.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BF21C86ECEB0019966A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE080C0F1C86ED6B0019966A /* EezehRequests.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BFF1C86ED410019966A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE080C151C86ED6C0019966A /* EezehRequests.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BE080B801C86E5720019966A /* EezehRequests */ = {
+		BE080B801C86E5720019966A /* EezehRequests iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE080B951C86E5720019966A /* Build configuration list for PBXNativeTarget "EezehRequests" */;
+			buildConfigurationList = BE080B951C86E5720019966A /* Build configuration list for PBXNativeTarget "EezehRequests iOS" */;
 			buildPhases = (
 				BE080B7C1C86E5720019966A /* Sources */,
 				BE080B7D1C86E5720019966A /* Frameworks */,
@@ -113,14 +216,14 @@
 			);
 			dependencies = (
 			);
-			name = EezehRequests;
+			name = "EezehRequests iOS";
 			productName = EezehRequests;
 			productReference = BE080B811C86E5720019966A /* EezehRequests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		BE080B8A1C86E5720019966A /* EezehRequestsTests */ = {
+		BE080B8A1C86E5720019966A /* EezehRequests iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE080B981C86E5720019966A /* Build configuration list for PBXNativeTarget "EezehRequestsTests" */;
+			buildConfigurationList = BE080B981C86E5720019966A /* Build configuration list for PBXNativeTarget "EezehRequests iOS Tests" */;
 			buildPhases = (
 				BE080B871C86E5720019966A /* Sources */,
 				BE080B881C86E5720019966A /* Frameworks */,
@@ -131,10 +234,82 @@
 			dependencies = (
 				BE080B8E1C86E5720019966A /* PBXTargetDependency */,
 			);
-			name = EezehRequestsTests;
+			name = "EezehRequests iOS Tests";
 			productName = EezehRequestsTests;
-			productReference = BE080B8B1C86E5720019966A /* EezehRequestsTests.xctest */;
+			productReference = BE080B8B1C86E5720019966A /* EezehRequests iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE080BD11C86E90C0019966A /* EezehRequests OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE080BE31C86E90C0019966A /* Build configuration list for PBXNativeTarget "EezehRequests OSX" */;
+			buildPhases = (
+				BE080BCD1C86E90C0019966A /* Sources */,
+				BE080BCE1C86E90C0019966A /* Frameworks */,
+				BE080BCF1C86E90C0019966A /* Headers */,
+				BE080BD01C86E90C0019966A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EezehRequests OSX";
+			productName = "EezehRequests OSX";
+			productReference = BE080BD21C86E90C0019966A /* EezehRequests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE080BDA1C86E90C0019966A /* EezehRequests OSX Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE080BE61C86E90C0019966A /* Build configuration list for PBXNativeTarget "EezehRequests OSX Tests" */;
+			buildPhases = (
+				BE080BD71C86E90C0019966A /* Sources */,
+				BE080BD81C86E90C0019966A /* Frameworks */,
+				BE080BD91C86E90C0019966A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE080BDE1C86E90C0019966A /* PBXTargetDependency */,
+			);
+			name = "EezehRequests OSX Tests";
+			productName = "EezehRequests OSXTests";
+			productReference = BE080BDB1C86E90C0019966A /* EezehRequests OSX Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE080BF41C86ECEB0019966A /* EezehRequests watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE080BFA1C86ECEB0019966A /* Build configuration list for PBXNativeTarget "EezehRequests watchOS" */;
+			buildPhases = (
+				BE080BF01C86ECEB0019966A /* Sources */,
+				BE080BF11C86ECEB0019966A /* Frameworks */,
+				BE080BF21C86ECEB0019966A /* Headers */,
+				BE080BF31C86ECEB0019966A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EezehRequests watchOS";
+			productName = "EezehRequests watchOS";
+			productReference = BE080BF51C86ECEB0019966A /* EezehRequests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE080C011C86ED410019966A /* EezehRequests tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE080C071C86ED410019966A /* Build configuration list for PBXNativeTarget "EezehRequests tvOS" */;
+			buildPhases = (
+				BE080BFD1C86ED410019966A /* Sources */,
+				BE080BFE1C86ED410019966A /* Frameworks */,
+				BE080BFF1C86ED410019966A /* Headers */,
+				BE080C001C86ED410019966A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EezehRequests tvOS";
+			productName = "EezehRequests tvOS";
+			productReference = BE080C021C86ED410019966A /* EezehRequests.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -154,6 +329,20 @@
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = WK35K3FV5Z;
 					};
+					BE080BD11C86E90C0019966A = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					BE080BDA1C86E90C0019966A = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					BE080BF41C86ECEB0019966A = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = WK35K3FV5Z;
+					};
+					BE080C011C86ED410019966A = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = WK35K3FV5Z;
+					};
 				};
 			};
 			buildConfigurationList = BE080B7B1C86E5720019966A /* Build configuration list for PBXProject "EezehRequests" */;
@@ -168,8 +357,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE080B801C86E5720019966A /* EezehRequests */,
-				BE080B8A1C86E5720019966A /* EezehRequestsTests */,
+				BE080B801C86E5720019966A /* EezehRequests iOS */,
+				BE080B8A1C86E5720019966A /* EezehRequests iOS Tests */,
+				BE080BD11C86E90C0019966A /* EezehRequests OSX */,
+				BE080BDA1C86E90C0019966A /* EezehRequests OSX Tests */,
+				BE080BF41C86ECEB0019966A /* EezehRequests watchOS */,
+				BE080C011C86ED410019966A /* EezehRequests tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +382,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE080BD01C86E90C0019966A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BD91C86E90C0019966A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BF31C86ECEB0019966A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080C001C86ED410019966A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -196,6 +417,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE080BC11C86E5FD0019966A /* DataRequest.swift in Sources */,
+				BE080BBF1C86E5FD0019966A /* RequestType.swift in Sources */,
+				BE080BC71C86E5FD0019966A /* Receivable.swift in Sources */,
+				BE080BC31C86E5FD0019966A /* JSONRequest.swift in Sources */,
+				BE080BC51C86E5FD0019966A /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,13 +433,62 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE080BCD1C86E90C0019966A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE080BEE1C86E9E80019966A /* Response.swift in Sources */,
+				BE080BEB1C86E9E80019966A /* RequestType.swift in Sources */,
+				BE080BEC1C86E9E80019966A /* DataRequest.swift in Sources */,
+				BE080BED1C86E9E80019966A /* JSONRequest.swift in Sources */,
+				BE080BEF1C86E9E80019966A /* Receivable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BD71C86E90C0019966A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE080BEA1C86E9E30019966A /* EezehRequestsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BF01C86ECEB0019966A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE080C0D1C86ED6B0019966A /* Response.swift in Sources */,
+				BE080C0A1C86ED6B0019966A /* RequestType.swift in Sources */,
+				BE080C0B1C86ED6B0019966A /* DataRequest.swift in Sources */,
+				BE080C0C1C86ED6B0019966A /* JSONRequest.swift in Sources */,
+				BE080C0E1C86ED6B0019966A /* Receivable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE080BFD1C86ED410019966A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE080C131C86ED6C0019966A /* Response.swift in Sources */,
+				BE080C101C86ED6C0019966A /* RequestType.swift in Sources */,
+				BE080C111C86ED6C0019966A /* DataRequest.swift in Sources */,
+				BE080C121C86ED6C0019966A /* JSONRequest.swift in Sources */,
+				BE080C141C86ED6C0019966A /* Receivable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		BE080B8E1C86E5720019966A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE080B801C86E5720019966A /* EezehRequests */;
+			target = BE080B801C86E5720019966A /* EezehRequests iOS */;
 			targetProxy = BE080B8D1C86E5720019966A /* PBXContainerItemProxy */;
+		};
+		BE080BDE1C86E90C0019966A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE080BD11C86E90C0019966A /* EezehRequests OSX */;
+			targetProxy = BE080BDD1C86E90C0019966A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -255,7 +530,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -297,7 +573,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -310,15 +587,17 @@
 		BE080B961C86E5720019966A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EezehRequests/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dreymonde.EezehRequests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EezehRequests;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -326,15 +605,17 @@
 		BE080B971C86E5720019966A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = EezehRequests/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dreymonde.EezehRequests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = EezehRequests;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -359,6 +640,156 @@
 			};
 			name = Release;
 		};
+		BE080BE41C86E90C0019966A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/EezehRequests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreymonde.EezehRequests;
+				PRODUCT_NAME = EezehRequests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BE080BE51C86E90C0019966A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "$(SRCROOT)/EezehRequests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreymonde.EezehRequests;
+				PRODUCT_NAME = EezehRequests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BE080BE71C86E90C0019966A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EezehRequestsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dreymonde.EezehRequests-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BE080BE81C86E90C0019966A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EezehRequestsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dreymonde.EezehRequests-OSXTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BE080BFB1C86ECEB0019966A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EezehRequests/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreymonde.EezehRequests;
+				PRODUCT_NAME = EezehRequests;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		BE080BFC1C86ECEB0019966A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EezehRequests/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreymonde.EezehRequests;
+				PRODUCT_NAME = EezehRequests;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		BE080C081C86ED410019966A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EezehRequests/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreymonde.EezehRequests;
+				PRODUCT_NAME = EezehRequests;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		BE080C091C86ED410019966A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = EezehRequests/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreymonde.EezehRequests;
+				PRODUCT_NAME = EezehRequests;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -371,7 +802,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE080B951C86E5720019966A /* Build configuration list for PBXNativeTarget "EezehRequests" */ = {
+		BE080B951C86E5720019966A /* Build configuration list for PBXNativeTarget "EezehRequests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE080B961C86E5720019966A /* Debug */,
@@ -379,11 +810,43 @@
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		BE080B981C86E5720019966A /* Build configuration list for PBXNativeTarget "EezehRequestsTests" */ = {
+		BE080B981C86E5720019966A /* Build configuration list for PBXNativeTarget "EezehRequests iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE080B991C86E5720019966A /* Debug */,
 				BE080B9A1C86E5720019966A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE080BE31C86E90C0019966A /* Build configuration list for PBXNativeTarget "EezehRequests OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE080BE41C86E90C0019966A /* Debug */,
+				BE080BE51C86E90C0019966A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE080BE61C86E90C0019966A /* Build configuration list for PBXNativeTarget "EezehRequests OSX Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE080BE71C86E90C0019966A /* Debug */,
+				BE080BE81C86E90C0019966A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE080BFA1C86ECEB0019966A /* Build configuration list for PBXNativeTarget "EezehRequests watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE080BFB1C86ECEB0019966A /* Debug */,
+				BE080BFC1C86ECEB0019966A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE080C071C86ED410019966A /* Build configuration list for PBXNativeTarget "EezehRequests tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE080C081C86ED410019966A /* Debug */,
+				BE080C091C86ED410019966A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

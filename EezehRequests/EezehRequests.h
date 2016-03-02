@@ -6,7 +6,7 @@
 //  Copyright © 2016 Oleg Dreyman. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for EezehRequests.
 FOUNDATION_EXPORT double EezehRequestsVersionNumber;

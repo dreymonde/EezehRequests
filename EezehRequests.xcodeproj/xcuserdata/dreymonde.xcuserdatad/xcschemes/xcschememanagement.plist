@@ -4,10 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>EezehRequests.xcscheme</key>
+		<key>EezehRequests OSX.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>EezehRequests iOS.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>EezehRequests tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>EezehRequests watchOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -18,6 +33,36 @@
 			<true/>
 		</dict>
 		<key>BE080B8A1C86E5720019966A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE080B9F1C86E5AE0019966A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE080BA81C86E5AE0019966A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE080BD11C86E90C0019966A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE080BDA1C86E90C0019966A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE080BF41C86ECEB0019966A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE080C011C86ED410019966A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

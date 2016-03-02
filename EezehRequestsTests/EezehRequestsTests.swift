@@ -7,9 +7,16 @@
 //
 
 import XCTest
-@testable import EezehRequests
+import EezehRequests
 
 class EezehRequestsTests: XCTestCase {
+    
+    let defaultError: (ErrorType -> Void) = { error in
+        print(error)
+        XCTFail()
+    }
+    
+    let timeout = 10.0
     
     override func setUp() {
         super.setUp()
@@ -21,16 +28,29 @@ class EezehRequestsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testJSONRequest() {
+        let expectation = expectationWithDescription("Async JSON task")
+        let url = NSURL(string: "http://cist.nure.ua/ias/app/tt/P_API_DEPARTMENTS_JSON?p_id_faculty=1")!
+        var request = JSONRequest(.GET, url: url) { jsonRespond in
+            print("Here")
+            print(jsonRespond.data)
+            expectation.fulfill()
+        }
+        request.error = defaultError
+        request.execute()
+        waitForExpectationsWithTimeout(timeout, handler: nil)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+    func testDataRequest() {
+        let expectation = expectationWithDescription("Async Data task")
+        let url = NSURL(string: "https://tjournal.ru")!
+        var request = DataRequest(.GET, url: url) { respond in
+            print("Here")
+            expectation.fulfill()
         }
+        request.error = defaultError
+        request.execute()
+        waitForExpectationsWithTimeout(10.0, handler: nil)
     }
     
 }
