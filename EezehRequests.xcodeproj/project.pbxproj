@@ -647,6 +647,7 @@
 		BE080BE41C86E90C0019966A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -668,6 +669,7 @@
 		BE080BE51C86E90C0019966A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -821,6 +823,7 @@
 				BE080B971C86E5720019966A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE080B981C86E5720019966A /* Build configuration list for PBXNativeTarget "EezehRequests iOS Tests" */ = {
 			isa = XCConfigurationList;
@@ -829,6 +832,7 @@
 				BE080B9A1C86E5720019966A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE080BE31C86E90C0019966A /* Build configuration list for PBXNativeTarget "EezehRequests OSX" */ = {
 			isa = XCConfigurationList;
@@ -837,6 +841,7 @@
 				BE080BE51C86E90C0019966A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE080BE61C86E90C0019966A /* Build configuration list for PBXNativeTarget "EezehRequests OSX Tests" */ = {
 			isa = XCConfigurationList;
@@ -845,6 +850,7 @@
 				BE080BE81C86E90C0019966A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE080BFA1C86ECEB0019966A /* Build configuration list for PBXNativeTarget "EezehRequests watchOS" */ = {
 			isa = XCConfigurationList;
@@ -853,6 +859,7 @@
 				BE080BFC1C86ECEB0019966A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE080C071C86ED410019966A /* Build configuration list for PBXNativeTarget "EezehRequests tvOS" */ = {
 			isa = XCConfigurationList;
@@ -861,6 +868,7 @@
 				BE080C091C86ED410019966A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
