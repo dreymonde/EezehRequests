@@ -31,7 +31,7 @@ class EezehRequestsTests: XCTestCase {
     func testJSONRequest() {
         let expectation = expectationWithDescription("Async JSON task")
         let url = NSURL(string: "http://cist.nure.ua/ias/app/tt/P_API_DEPARTMENTS_JSON?p_id_faculty=1")!
-        var request = JSONRequest(.GET, url: url) { jsonRespond in
+        let request = JSONRequest(.GET, url: url) { jsonRespond in
             print("Here")
             print(jsonRespond.data)
             expectation.fulfill()
@@ -44,7 +44,7 @@ class EezehRequestsTests: XCTestCase {
     func testDataRequest() {
         let expectation = expectationWithDescription("Async Data task")
         let url = NSURL(string: "https://tjournal.ru")!
-        var request = DataRequest(.GET, url: url) { respond in
+        let request = DataRequest(.GET, url: url) { respond in
             print("Here")
             expectation.fulfill()
         }

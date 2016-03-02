@@ -10,7 +10,7 @@ import Foundation
 
 public typealias JSON = [String: AnyObject]
 
-public struct JSONRequest: RequestType {
+public class JSONRequest: RequestType {
     
     public let method: Method
     public let URL: NSURL
@@ -26,7 +26,7 @@ public struct JSONRequest: RequestType {
     }
     
     public func execute() {
-        var request = DataRequest(.GET, url: URL) { response in
+        let request = DataRequest(.GET, url: URL) { response in
             do {
                 if let json = try NSJSONSerialization.JSONObjectWithData(response.data, options: []) as? JSON {
                     let responseStruct = Response(data: json, response: response.response)

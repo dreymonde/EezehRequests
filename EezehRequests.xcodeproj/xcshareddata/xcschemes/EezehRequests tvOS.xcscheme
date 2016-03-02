@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BE080C011C86ED410019966A"
-               BuildableName = "EezehRequests tvOS.framework"
+               BuildableName = "EezehRequests.framework"
                BlueprintName = "EezehRequests tvOS"
                ReferencedContainer = "container:EezehRequests.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BE080C011C86ED410019966A"
-            BuildableName = "EezehRequests tvOS.framework"
+            BuildableName = "EezehRequests.framework"
             BlueprintName = "EezehRequests tvOS"
             ReferencedContainer = "container:EezehRequests.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BE080C011C86ED410019966A"
-            BuildableName = "EezehRequests tvOS.framework"
+            BuildableName = "EezehRequests.framework"
             BlueprintName = "EezehRequests tvOS"
             ReferencedContainer = "container:EezehRequests.xcodeproj">
          </BuildableReference>

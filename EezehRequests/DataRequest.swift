@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct DataRequest: RequestType {
+public class DataRequest: RequestType {
     
     public let method: Method
     public let URL: NSURL
