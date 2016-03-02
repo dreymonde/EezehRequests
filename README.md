@@ -2,4 +2,6 @@
 Very simple NSURLSession wrapper.
 
 ### Roadmap
-- [ ] Linux support.
+- [ ] Linux support:
+  - [ ] Substitute NSJSONSerialization
+  - [ ] Substitute NSURLSession
