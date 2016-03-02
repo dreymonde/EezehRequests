@@ -56,30 +56,7 @@ public struct JSONRequest: RequestType {
         request.error = pushError
         request.execute()
     }
-    
-//    internal func oldexecute() {
-//        var request = DataRequest(.GET, url: URL) { response in
-//            var jsonResponse = JSON(data: response.data)
-//            if jsonResponse == JSON.null {
-//                guard let fixedData = self.fixFuckingCIST(response.data) else {
-//                    self.error?(.JsonParseNull)
-//                    return
-//                }
-//                jsonResponse = JSON(data: fixedData)
-//                if jsonResponse == JSON.null {
-//                    self.error?(.JsonParseNull)
-//                    return
-//                }
-//            }
-//            let responseStruct = Response(data: jsonResponse, response: response.response)
-//            self.completion(responseStruct)
-//        }
-//        request.error = { error in
-//            self.error?(error)
-//        }
-//        request.execute()
-//    }
-    
+        
     private func fixFuckingCIST(data: NSData) -> NSData? {
         guard let received = String(data: data, encoding: NSWindowsCP1251StringEncoding) else {
             return nil
