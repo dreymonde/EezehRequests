@@ -35,7 +35,7 @@ public class JSONRequest: RequestType {
                 }
                 self.error?(.JsonParseNull)
             } catch {
-                print("Can't parse CIST JSON, remaking")
+                // print("Can't parse CIST JSON, remaking")
                 guard let data = self.fixFuckingCIST(response.data) else {
                     self.error?(.JsonParseNull)
                     return
