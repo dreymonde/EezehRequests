@@ -34,7 +34,7 @@ public class JSONRequest: RequestType {
                     return
                 }
                 self.error?(.JsonParseNull)
-            } catch {
+            } catch let error as NSError where error.code == 3840 {
                 // print("Can't parse CIST JSON, remaking")
                 guard let data = self.fixFuckingCIST(response.data) else {
                     self.error?(.JsonParseNull)
@@ -50,6 +50,8 @@ public class JSONRequest: RequestType {
                 } catch {
                     self.error?(.JsonParseNull)
                 }
+            } catch {
+                self.error?(.JsonParseNull)
             }
         }
         request.error = pushError
