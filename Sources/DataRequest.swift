@@ -8,12 +8,18 @@
 
 import Foundation
 
+/// Request which returns NSData
 public class DataRequest: RequestType {
     
+    /// Request method
     public let method: Method
+    /// Request URL.
     public let URL: NSURL
+    /// Request NSData body. Leave like nil if you don't want to pass anything.
     public var body: NSData?
+    /// Completion handler. Set with init.
     public var completion: (Response<NSData> -> Void)
+    /// Optional error handler.
     public var error: (RequestError -> Void)? = nil
     
     public init(_ method: Method, url: NSURL, _ completion: (Response<NSData> -> Void)) {

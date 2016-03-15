@@ -8,6 +8,9 @@
 
 import Foundation
 
+/**
+ *  Main protocol for requests
+ */
 public protocol RequestType: Receivable {
     
     typealias ResponseType
@@ -22,10 +25,23 @@ public protocol RequestType: Receivable {
     
 }
 
+/**
+ Request method enum. Right now, only GET and POST is supported.
+ 
+ - GET:  GET request.
+ - POST: POST request.
+ */
 public enum Method: String {
     case GET, POST
 }
 
+/**
+ Request error.
+ 
+ - NetworkError:  Something is wrong with the network.
+ - NoData:        No data was received.
+ - JsonParseNull: Can't parse JSON from received data.
+ */
 public enum RequestError: ErrorType {
     case NetworkError(info: String)
     case NoData
