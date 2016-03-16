@@ -13,20 +13,20 @@ public typealias JSON = [String: AnyObject]
 public class JSONRequest: RequestType {
     
     public let method: Method
-    public let URL: NSURL
+    public let url: NSURL
     public var body: NSData?
     public var completion: (Response<JSON> -> Void)
     public var error: (RequestError -> Void)? = nil
     
     public init(_ method: Method, url: NSURL, _ completion: (Response<JSON> -> Void)) {
         self.method = method
-        self.URL = url
+        self.url = url
         self.completion = completion
         self.error = nil
     }
     
     public func execute() {
-        let request = DataRequest(.GET, url: URL) { response in
+        let request = DataRequest(.GET, url: url) { response in
             do {
                 if let json = try NSJSONSerialization.JSONObjectWithData(response.data, options: []) as? JSON {
                     let responseStruct = Response(data: json, statusCode: response.statusCode, headers: response.headers)

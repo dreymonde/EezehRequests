@@ -17,7 +17,7 @@ public class DataRequest: RequestType {
     /// Request method
     public let method: Method
     /// Request URL.
-    public let URL: NSURL
+    public let url: NSURL
     /// Request NSData body. Leave like nil if you don't want to pass anything.
     public var body: NSData?
     /// Completion handler. Set with init.
@@ -27,7 +27,7 @@ public class DataRequest: RequestType {
     
     public init(_ method: Method, url: NSURL, _ completion: (Response<NSData> -> Void)) {
         self.method = method
-        self.URL = url
+        self.url = url
         self.completion = completion
         self.error = nil
     }
@@ -48,7 +48,7 @@ public class DataRequest: RequestType {
             return
         }
         #else
-        let nRequest = NSMutableURLRequest(URL: URL)
+        let nRequest = NSMutableURLRequest(URL: url)
         nRequest.HTTPMethod = method.rawValue
         nRequest.HTTPBody = body
         let session = NSURLSession.sharedSession()
