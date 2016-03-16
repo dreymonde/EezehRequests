@@ -35,20 +35,29 @@ public class DataRequest: RequestType {
     public func execute() -> () {
 
         #if os(Linux)
-        guard let host = URL.host, path = URL.path else {
+        guard let host = url.host, path = url.path else {
             self.error?(.CantSendRequest)
             return
         }
+        print(host)
+        print(path)
         do {
             let client = try Client(host: host, port: 443)
             let result = try client.get(path)
-            print(result)
+            guard let received = result.body.buffer else {
+                self.error?(.NoData)
+                return
+            }
+            let data = NSData(bytes: received.bytes, length: received.count)
+            // TODO: Headers
+            let responseStruct = Response(data: data, statusCode: result.statusCode, headers: [:])
+            self.completion(responseStruct)
         } catch {
             self.error?(.NetworkError(info: String(error)))
             return
         }
         #else
-        let nRequest = NSMutableURLRequest(URL: url)
+        let nRequest = NSMutableURLRequest(url: url)
         nRequest.HTTPMethod = method.rawValue
         nRequest.HTTPBody = body
         let session = NSURLSession.sharedSession()
