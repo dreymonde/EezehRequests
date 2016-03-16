@@ -13,7 +13,7 @@ import Foundation
  */
 public protocol RequestType: Receivable {
     
-    typealias ResponseType
+    associatedtype ResponseType
     
     var method: Method { get }
     var URL: NSURL { get }
