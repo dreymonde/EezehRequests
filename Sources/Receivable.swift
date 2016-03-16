@@ -10,8 +10,8 @@ import Foundation
 
 public protocol Receivable {
 
-	typealias Received
-    typealias AnError = ErrorType
+	associatedtype Received
+    associatedtype AnError = ErrorType
 
 	var completion: (Received -> Void) { get }
 	var error: (AnError -> Void)? { get set }
