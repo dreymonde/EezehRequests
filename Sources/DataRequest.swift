@@ -42,7 +42,7 @@ public class DataRequest: RequestType {
         print(host)
         print(path)
         do {
-            let client = try Client(host: host, port: 443)
+            let client = try Client(host: host, port: 80)
             let result = try client.get(path)
             guard let received = result.body.buffer else {
                 self.error?(.NoData)
