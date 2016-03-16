@@ -29,20 +29,19 @@ public class JSONRequest: RequestType {
         let request = DataRequest(.GET, url: URL) { response in
             do {
                 if let json = try NSJSONSerialization.JSONObjectWithData(response.data, options: []) as? JSON {
-                    let responseStruct = Response(data: json, response: response.response)
+                    let responseStruct = Response(data: json, statusCode: response.statusCode, headers: response.headers)
                     self.completion(responseStruct)
                     return
                 }
                 self.error?(.JsonParseNull)
             } catch let error as NSError where error.code == 3840 {
-                // print("Can't parse CIST JSON, remaking")
                 guard let data = self.fixFuckingCIST(response.data) else {
                     self.error?(.JsonParseNull)
                     return
                 }
                 do {
                     if let json = try NSJSONSerialization.JSONObjectWithData(data, options: [.AllowFragments]) as? JSON {
-                        let responseStruct = Response(data: json, response: response.response)
+                        let responseStruct = Response(data: json, statusCode: response.statusCode, headers: response.headers)
                         self.completion(responseStruct)
                         return
                     }
