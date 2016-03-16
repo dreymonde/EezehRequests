@@ -46,4 +46,5 @@ public enum RequestError: ErrorType {
     case NetworkError(info: String)
     case NoData
     case JsonParseNull
+    case CantSendRequest
 }

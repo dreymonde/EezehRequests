@@ -5,6 +5,9 @@
 //  Created by Oleg Dreyman on 18.02.16.
 //  Copyright © 2016 Oleg Dreyman. All rights reserved.
 //
+#if os(Linux)
+import HTTPClient
+#endif
 
 import Foundation
 
@@ -30,6 +33,21 @@ public class DataRequest: RequestType {
     }
     
     public func execute() -> () {
+
+        #if os(Linux)
+        guard let host = URL.host, path = URL.path else {
+            self.error?(.CantSendRequest)
+            return
+        }
+        do {
+            let client = try Client(host: host, port: 443)
+            let result = try client.get(path)
+            print(result)
+        } catch {
+            self.error?(.NetworkError(info: String(error)))
+            return
+        }
+        #else
         let nRequest = NSMutableURLRequest(URL: URL)
         nRequest.HTTPMethod = method.rawValue
         nRequest.HTTPBody = body
@@ -54,6 +72,7 @@ public class DataRequest: RequestType {
             self.completion(responseStruct)
         }
         task.resume()
+        #endif
     }
     
 }
