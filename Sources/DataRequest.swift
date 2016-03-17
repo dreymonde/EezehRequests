@@ -57,7 +57,7 @@ public class DataRequest: RequestType {
             return
         }
         #else
-        let nRequest = NSMutableURLRequest(url: url)
+        let nRequest = NSMutableURLRequest(URL: url)
         nRequest.HTTPMethod = method.rawValue
         nRequest.HTTPBody = body
         let session = NSURLSession.sharedSession()

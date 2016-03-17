@@ -12,7 +12,11 @@ import Foundation
     import Jay
 #endif
 
-public typealias JSON = [String: Any]
+#if os(Linux)
+    public typealias JSON = [String: Any]
+#else
+    public typealias JSON = [String: AnyObject]
+#endif
 
 public class JSONRequest: RequestType {
     
