@@ -48,7 +48,7 @@ public class DataRequest: RequestType {
                 self.error?(.NoData)
                 return
             }
-            let data = NSData(bytes: received.bytes, length: received.count)
+            let data = received.nsData
             // TODO: Headers
             let responseStruct = Response(data: data, statusCode: result.statusCode, headers: [:])
             self.completion(responseStruct)
@@ -85,3 +85,48 @@ public class DataRequest: RequestType {
     }
     
 }
+
+public protocol PlainBytesConverible {
+    var plainBytes: [UInt8] { get }
+}
+
+extension NSData: PlainBytesConverible {
+    public var plainBytes: [UInt8] {
+        let count = length / strideof(UInt8)
+        var bytes = [UInt8](count: count, repeatedValue: 0)
+        getBytes(&bytes, length: length)
+        return bytes
+    }
+}
+
+#if os(Linux)
+
+public typealias ZWData = Data
+
+public protocol ZWDataConvertible {
+    var zwData: ZWData { get }
+}
+
+extension NSData: ZWDataConvertible {
+    public var zwData: ZWData {
+        return ZWData(bytes: plainBytes)
+    }
+}
+
+public protocol NSDataConvertible {
+    var nsData: NSData { get }
+}
+
+extension ZWData: NSDataConvertible {
+    public var nsData: NSData {
+        return NSData(bytes: bytes, length: count)
+    }
+}
+
+extension ZWData: PlainBytesConverible {
+    public var plainBytes: [UInt8] {
+        return bytes
+    }
+}
+
+#endif
