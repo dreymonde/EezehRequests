@@ -9,17 +9,25 @@
 import Foundation
 
 public struct Response<T> {
+    
+    #if !os(Linux)
+    public var response: NSHTTPURLResponse?
+    
     public init(data: T, response: NSHTTPURLResponse) {
         self.data = data
         self.response = response
+        self.statusCode = response.statusCode ?? 0
+        self.headers = response.allHeaderFields as? [String: AnyObject] ?? [:]
+    }
+    #endif
+    
+    public init(data: T, statusCode: Int, headers: [String: AnyObject]) {
+        self.data = data
+        self.statusCode = statusCode
+        self.headers = headers
     }
         
     public var data: T
-    public var response: NSHTTPURLResponse
-    public var statusCode: Int {
-        return response.statusCode
-    }
-    public var headers: [NSObject: AnyObject] {
-        return response.allHeaderFields
-    }
+    public var statusCode: Int
+    public var headers: [String: AnyObject]
 }

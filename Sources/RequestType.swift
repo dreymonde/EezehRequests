@@ -13,10 +13,10 @@ import Foundation
  */
 public protocol RequestType: Receivable {
     
-    typealias ResponseType
+    associatedtype ResponseType
     
     var method: Method { get }
-    var URL: NSURL { get }
+    var url: NSURL { get }
     var body: NSData? { get set }
     var completion: (Response<ResponseType> -> Void) { get set }
     var error: (RequestError -> Void)? { get set }
@@ -46,4 +46,5 @@ public enum RequestError: ErrorType {
     case NetworkError(info: String)
     case NoData
     case JsonParseNull
+    case CantSendRequest
 }

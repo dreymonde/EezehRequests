@@ -8,54 +8,94 @@
 
 import Foundation
 
-public typealias JSON = [String: AnyObject]
+#if os(Linux)
+    import Jay
+#endif
+
+#if os(Linux)
+    public typealias JSON = [String: Any]
+#else
+    public typealias JSON = [String: AnyObject]
+#endif
 
 public class JSONRequest: RequestType {
     
     public let method: Method
-    public let URL: NSURL
+    public let url: NSURL
     public var body: NSData?
     public var completion: (Response<JSON> -> Void)
     public var error: (RequestError -> Void)? = nil
     
     public init(_ method: Method, url: NSURL, _ completion: (Response<JSON> -> Void)) {
         self.method = method
-        self.URL = url
+        self.url = url
         self.completion = completion
         self.error = nil
     }
     
     public func execute() {
-        let request = DataRequest(.GET, url: URL) { response in
+        let request = DataRequest(.GET, url: url) { response in
             do {
-                if let json = try NSJSONSerialization.JSONObjectWithData(response.data, options: []) as? JSON {
-                    let responseStruct = Response(data: json, response: response.response)
-                    self.completion(responseStruct)
-                    return
-                }
-                self.error?(.JsonParseNull)
+                let json = try self.parseJSON(fromData: response.data)
+                let responseStruct = Response(data: json, statusCode: response.statusCode, headers: response.headers)
+                self.completion(responseStruct)
+                return
             } catch let error as NSError where error.code == 3840 {
-                // print("Can't parse CIST JSON, remaking")
                 guard let data = self.fixFuckingCIST(response.data) else {
                     self.error?(.JsonParseNull)
                     return
                 }
                 do {
-                    if let json = try NSJSONSerialization.JSONObjectWithData(data, options: [.AllowFragments]) as? JSON {
-                        let responseStruct = Response(data: json, response: response.response)
-                        self.completion(responseStruct)
-                        return
-                    }
-                    self.error?(.JsonParseNull)
+                    let json = try self.parseJSON(fromData: data)
+                    let responseStruct = Response(data: json, statusCode: response.statusCode, headers: response.headers)
+                    self.completion(responseStruct)
+                    return
                 } catch {
                     self.error?(.JsonParseNull)
                 }
             } catch {
+                // guard let data = self.fixFuckingCIST(response.data) else {
+                //     self.error?(.JsonParseNull)
+                //     return
+                // }
+                // do {
+                //     let json = try self.parseJSON(fromData: data)
+                //     let responseStruct = Response(data: json, statusCode: response.statusCode, headers: response.headers)
+                //     self.completion(responseStruct)
+                //     return
+                // } catch {
+                //     print(error)
+                //     self.error?(.JsonParseNull)
+                // }
+                print(error)
                 self.error?(.JsonParseNull)
             }
         }
         request.error = pushError
         request.execute()
+    }
+
+    public enum JsonParseError: ErrorType {
+        case CastFail
+    }
+
+    private func parseJSON(fromData data: NSData) throws -> JSON {
+        #if os(Linux) 
+        let bytes = data.plainBytes
+        let rawJSON = try Jay().jsonFromData(bytes)
+        if let json = rawJSON as? JSON {
+            return json
+        } else {
+            throw JsonParseError.CastFail
+        }
+        #else
+        let rawJSON = try NSJSONSerialization.JSONObjectWithData(data, options: [])
+        if let json = rawJSON as? JSON {
+            return json
+        } else {
+            throw JsonParseError.CastFail
+        }
+        #endif
     }
         
     private func fixFuckingCIST(data: NSData) -> NSData? {
