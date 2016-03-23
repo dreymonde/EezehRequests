@@ -10,24 +10,24 @@ import XCTest
 import EezehRequests
 
 class EezehRequestsTests: XCTestCase {
-    
+
     let defaultError: (ErrorType -> Void) = { error in
         print(error)
         XCTFail()
     }
-    
+
     let timeout = 10.0
-    
+
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-    
+
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
+
     func testJSONRequest() {
         let expectation = expectationWithDescription("Async JSON task")
         let url = NSURL(string: "http://cist.nure.ua/ias/app/tt/P_API_DEPARTMENTS_JSON?p_id_faculty=1")!
@@ -40,7 +40,7 @@ class EezehRequestsTests: XCTestCase {
         request.execute()
         waitForExpectationsWithTimeout(timeout, handler: nil)
     }
-    
+
     func testDataRequest() {
         let expectation = expectationWithDescription("Async Data task")
         let url = NSURL(string: "https://tjournal.ru")!
@@ -52,5 +52,5 @@ class EezehRequestsTests: XCTestCase {
         request.execute()
         waitForExpectationsWithTimeout(10.0, handler: nil)
     }
-    
+
 }

@@ -19,20 +19,20 @@ import Foundation
 #endif
 
 public class JSONRequest: RequestType {
-    
+
     public let method: Method
     public let url: NSURL
     public var body: NSData?
     public var completion: (Response<JSON> -> Void)
     public var error: (RequestError -> Void)? = nil
-    
+
     public init(_ method: Method, url: NSURL, _ completion: (Response<JSON> -> Void)) {
         self.method = method
         self.url = url
         self.completion = completion
         self.error = nil
     }
-    
+
     public func execute() {
         let request = DataRequest(.GET, url: url) { response in
             do {
@@ -80,7 +80,7 @@ public class JSONRequest: RequestType {
     }
 
     private func parseJSON(fromData data: NSData) throws -> JSON {
-        #if os(Linux) 
+        #if os(Linux)
         let bytes = data.plainBytes
         let rawJSON = try Jay().jsonFromData(bytes)
         if let json = rawJSON as? JSON {
@@ -97,7 +97,7 @@ public class JSONRequest: RequestType {
         }
         #endif
     }
-        
+
     private func fixFuckingCIST(data: NSData) -> NSData? {
         guard let received = String(data: data, encoding: NSWindowsCP1251StringEncoding) else {
             return nil
@@ -107,5 +107,5 @@ public class JSONRequest: RequestType {
         }
         return dataFromString
     }
-    
+
 }

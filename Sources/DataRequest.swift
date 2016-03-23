@@ -13,7 +13,7 @@ import Foundation
 
 /// Request which returns NSData
 public class DataRequest: RequestType {
-    
+
     /// Request method
     public let method: Method
     /// Request URL.
@@ -24,14 +24,14 @@ public class DataRequest: RequestType {
     public var completion: (Response<NSData> -> Void)
     /// Optional error handler.
     public var error: (RequestError -> Void)? = nil
-    
+
     public init(_ method: Method, url: NSURL, _ completion: (Response<NSData> -> Void)) {
         self.method = method
         self.url = url
         self.completion = completion
         self.error = nil
     }
-    
+
     public func execute() -> () {
 
         #if os(Linux)
@@ -66,24 +66,24 @@ public class DataRequest: RequestType {
                 self.error?(.NetworkError(info: error!.description))
                 return
             }
-            
+
             guard let httpResponse = response as? NSHTTPURLResponse else {
                 self.error?(.NetworkError(info: "Response is not HTTPURLResponse"))
                 return
             }
-            
+
             guard let data = data else {
                 self.error?(.NoData)
                 return
             }
-            
+
             let responseStruct = Response(data: data, response: httpResponse)
             self.completion(responseStruct)
         }
         task.resume()
         #endif
     }
-    
+
 }
 
 public protocol PlainBytesConverible {

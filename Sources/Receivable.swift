@@ -21,11 +21,11 @@ public protocol Receivable {
 }
 
 extension Receivable {
-    
+
     public var pushError: (AnError -> Void) {
         return { error in
             self.error?(error)
         }
     }
-    
+
 }
